@@ -4,8 +4,11 @@
 * **搜索包含：** 知乎，b站，百科，youtube，twitter等。去掉了原作者提供的大量不常用词典。
 
 # 安装
-脚本安装地址：
+github地址：  
+https://github.com/butaixianran/AI-Translate-and-Search
 
+脚本安装地址：  
+https://greasyfork.org/zh-CN/scripts/420649-ai-translate-and-search
 
 Chrome类浏览器需要先安装Tampermonkey扩展，才能安装用户脚本。  
 https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
