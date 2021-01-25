@@ -1,7 +1,8 @@
 # AI-Translate-and-Search
 划词AI翻译+搜索：
 * **AI翻译按质量排序。调用：** 金山词霸，阿里翻译，百度翻译，搜狗翻译，腾讯翻译，彩云小译，DeepL，沪江日语词典等。
-* **搜索包含：** 知乎，b站，百科，youtube，twitter等。去掉了原作者提供的大量不常用词典。
+* **搜索包含：** 知乎，b站，百科，youtube，twitter等。
+* **设置：** 展开后，可以通过点击“Setting”调整 排序 和 是否显示。
 
 # 预览图
 **选择一段文本后：**  
@@ -10,8 +11,6 @@
 **展开后：**  
 ![FullMode](https://github.com/butaixianran/AI-Translate-and-Search/blob/main/res/img/FullMode.jpg)
 
-
-可以通过点击“Setting”调整 排序 和 是否显示。
 
 
 # 安装
