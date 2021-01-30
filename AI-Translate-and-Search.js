@@ -78,16 +78,29 @@
                 popup: function (text) {
 
                     //监听剪切板复制事件，一旦有复制操作，把复制的数据改为纯文本
-                    document.oncopy = function (e) {
-                        e.clipboardData.setData("text/plain", text);
-                        e.preventDefault();
-                    };
+                    // document.oncopy = function (e) {
+                    //     e.clipboardData.setData("text/plain", text);
+                    ////下面这行代码，会导致正常的复制无效化，因此不要用监听事件的方法，而是重写一个方法
+                    //     e.preventDefault();
+                    // };
 
                     //复制选择的文本
-                    let isCopied = document.execCommand("copy");
+                    // let isCopied = document.execCommand("copy");
                     //console.log("isCopied: " + isCopied);
                     //判断复制是否成功
-                    if(!isCopied) return;
+                    // if(!isCopied) return;
+
+                    //创建隐藏的输入区
+                    const el = document.createElement('textarea');
+                    //输入齆鼻儿
+                    el.value = text;
+                    //输入区添加到网页
+                    document.body.appendChild(el);
+                    el.select();
+                    //复制就是纯文本
+                    document.execCommand('copy');
+                    //移除输入区
+                    document.body.removeChild(el);
 
                     //清除选择，不然工具条不能隐藏
                     window.getSelection().empty();
