@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AI Translate and Search
 // @namespace    butaixianran
-// @version      0.2
+// @version      0.3
 // @description  划词AI翻译+搜索。AI翻译按质量排序。调用：金山词霸，阿里翻译，百度翻译，搜狗翻译，腾讯翻译，彩云小译，DeepL，沪江日语词典等。搜索包含：知乎，b站，百科，youtube，twitter等。去掉了原作者提供的大量不常用词典。
 // @author       barrer, modified by butaixianran
 // @homepage     https://github.com/butaixianran/AI-Translate-and-Search
@@ -120,6 +120,34 @@
                 custom: function (text) {}
             },
             {
+                name: '金山翻译[质量高]',
+                id: 'iciba',
+                image: 'data:image/png;base64,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',
+                host: ['www.iciba.com'],
+                popup: function (text) {
+                    //金山翻译禁用了直接通过url跳转到翻译页面，必须在首页点击按钮跳转，而按钮是个div，而且没有id，刻意防止解析。
+                    //popupCenter('https://www.iciba.com/', null, 800, screen.height);
+                    popupCenter('https://www.iciba.com/word?w=' + encodeURIComponent(text), null, 800, screen.height);
+                },
+                custom: function (text) {
+                    /*
+                    //等网页加载完毕
+                    window.onload = function(){
+                        //获取输入框
+                        let source = document.querySelector('input');
+                        //先获得焦点，再输入文字
+                        source.focus();
+                        triggerEvent(source, 'focus');
+                        source.value = text;
+                        //通过keydown生成回车事件
+                        triggerEvent(source, 'keydown');
+                        triggerEvent(source, 'input');
+                        triggerEvent(source, 'keyup');
+                    };
+                    */
+                }
+            },
+            {
                 name: '阿里翻译',
                 id: 'alibaba',
                 image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAA+CAMAAAC7vX2UAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTFtd11pc1Vxe115g2Fpc1WNk3Vlc1Vlc1Vlc1Vpc1llc1Vpc1Vpc1Vpc1Vpc1llb1Cmp2XgAAAAQdFJOUwBCmy4buwzpy/ZY2nmKqmoSXCmfAAACJklEQVRYw62Y2YKDIAxFFWQRZPn/rx1tRcEkLHby1jqNJyG5CTNNNdtsBLaKeRo3FnEb9zUTnqIddiUoV8NYJFSMbNCVpl2t8r+gYjSvoKzILBWHGPFk0BRfqMsLqMf7E9b2K9Re/+fXut8VlZQlvYIPQ3Gqbt2vUNMUzifqZ6hJrmPNk6A88sxXng1B3aXV1zy2+mI10DyhfuBuoHnqUBPvb57QqkLd2zxStY4o9OpyE+qWB94JVYhulhZzS36jeTY0qeL8tGwq01L1Amr+ppizdWDyJKi1hDpSbPTQ5KGg9i8UcKSNfAGFzC8/v8oUMLW1St2hUBpG1myZS9ZcBWplPbLeAWW3LplaUCiTORK9A74BhUZmwjiUDTCyo41UP9RXB7Eimj3VPDSUcrCIZGC0rDF0ktioscicYvTkIaDQyMRH9sjJwzrHmwz27Cxq8lxQde2/FGuhJ0+CUjWoW4sZvbZdaxMNJbNbyrdeNnTy+BZUqcWMXtt4A8qU4peKGFvbqlDllMmF0cDJU4MCUybrLGRto6EMdjtx4Nw9gAqtyJ7tDpoHh5o9jIxxVyb50TwYlEQi+2gxLzXo0TwCQO2NDxwlLbaOXtsA1OwjEtm1M0l6bbuqT50GI8t/vqjC1qx5qjdITIuJGzW/jw83RIsN/pfuPk7MMC2+S/xxLBVX5KrCKFfEfzgqqwqe3f38pcUiMz1XhAfUoY5Cl9ZaVYJ+mj9q8g8GmGi6Kmn9mQAAAABJRU5ErkJggg==',
@@ -229,32 +257,6 @@
                     popupCenter('https://baike.baidu.com/item/' + encodeURIComponent(text), null, 800, screen.height);
                 },
                 custom: function (text) {}
-            },
-            {
-                name: '金山翻译[质量高，需手动回车]',
-                id: 'iciba',
-                image: 'data:image/png;base64,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',
-                host: ['www.iciba.com'],
-                popup: function (text) {
-                    //金山翻译禁用了直接通过url跳转到翻译页面，必须在首页点击按钮跳转，而按钮是个div，而且没有id，刻意防止解析。
-                    popupCenter('https://www.iciba.com/', null, 800, screen.height);
-                    //popupCenter('https://www.iciba.com/word?w=' + encodeURIComponent(text), null, 800, screen.height);
-                },
-                custom: function (text) {
-                    //等网页加载完毕
-                    window.onload = function(){
-                        //获取输入框
-                        let source = document.querySelector('input');
-                        //先获得焦点，再输入文字
-                        source.focus();
-                        triggerEvent(source, 'focus');
-                        source.value = text;
-                        //通过keydown生成回车事件
-                        triggerEvent(source, 'keydown');
-                        triggerEvent(source, 'input');
-                        triggerEvent(source, 'keyup');
-                    };
-                }
             },
             {
                 name: '搜狗翻译',
