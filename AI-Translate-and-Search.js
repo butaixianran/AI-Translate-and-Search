@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AI Translate and Search
 // @namespace    butaixianran
-// @version      0.3
+// @version      0.4
 // @description  划词AI翻译+搜索。AI翻译按质量排序。调用：金山词霸，阿里翻译，百度翻译，搜狗翻译，腾讯翻译，彩云小译，DeepL，沪江日语词典等。搜索包含：知乎，b站，百科，youtube，twitter等。去掉了原作者提供的大量不常用词典。
 // @author       barrer, modified by butaixianran
 // @homepage     https://github.com/butaixianran/AI-Translate-and-Search
@@ -145,6 +145,22 @@
                         triggerEvent(source, 'keyup');
                     };
                     */
+                }
+            },
+            {
+                name: '有道翻译',
+                id: 'fanyi.youdao.com',
+                image: 'data:image/png;base64,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',
+                host: ['fanyi.youdao.com'],
+                popup: function (text) {
+                    popupCenter('https://fanyi.youdao.com/', null, 800, screen.height);
+                },
+                custom: function (text) {
+                    var source = document.querySelector('textarea');
+                    source.value = text;
+                    //triggerEvent(source, 'change');
+                    triggerEvent(source, 'input');
+                    triggerEvent(source, 'keyup');
                 }
             },
             {
