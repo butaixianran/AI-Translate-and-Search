@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AI Translate and Search
 // @namespace    butaixianran
-// @version      0.5
+// @version      0.6
 // @description  划词AI翻译+搜索。AI翻译按质量排序。调用：金山词霸，阿里翻译，百度翻译，搜狗翻译，腾讯翻译，彩云小译，DeepL，沪江日语词典等。搜索包含：知乎，b站，百科，youtube，twitter等。去掉了原作者提供的大量不常用词典。
 // @author       barrer, modified by butaixianran
 // @homepage     https://github.com/butaixianran/AI-Translate-and-Search
@@ -181,31 +181,6 @@
                         triggerEvent(source, 'keyup');
                     };
 
-                }
-            },
-            {
-                name: '阿里云[质量高，需手动回车]',
-                id: 'aliyun',
-                image: 'data:image/ico;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABILAAASCwAAAAAAAAAAAABMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/1AAav/QAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav9ATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/QABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr/0ABq/1BMcEcATHBHAExwRwAAav+gAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr/kExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/kABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/6BMcEcAAGr/YABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr/8ABq/6BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/oABq//AAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/2AAav/gAGr//wBq//8Aav//AGr//wBq//8Aav/gAGr/kABq/1BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/1AAav+QAGr/4ABq//8Aav//AGr//wBq//8Aav//AGr/4ABq//8Aav//AGr//wBq//8Aav//AGr/YExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/YABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/7BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/sABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr/EExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwAAav8QAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//9McEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwAAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//0xwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/yAAav9AAGr/QABq/0AAav9AAGr/QABq/0AAav9AAGr/QABq/0AAav9AAGr/IExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//THBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/gABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav+ATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//9McEcATHBHAExwRwBMcEcATHBHAExwRwAAav+AAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/4BMcEcATHBHAExwRwBMcEcATHBHAExwRwAAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//0xwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/0AAav+AAGr/gABq/4AAav+AAGr/gABq/4AAav+AAGr/gABq/4AAav+AAGr/QExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//THBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav8QTHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/xAAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/7BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/sABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/2BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/2AAav//AGr//wBq//8Aav//AGr//wBq/+AAav//AGr//wBq//8Aav//AGr//wBq/+AAav+QAGr/UExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/UABq/5AAav/gAGr//wBq//8Aav//AGr//wBq//8Aav/gAGr/YABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr/8ABq/6BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcAAGr/oABq//AAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/2BMcEcAAGr/oABq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/5BMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAABq/5AAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav+gTHBHAExwRwBMcEcAAGr/UABq/9AAav//AGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq/0BMcEcATHBHAExwRwBMcEcATHBHAExwRwAAav9AAGr//wBq//8Aav//AGr//wBq//8Aav//AGr//wBq//8Aav/QAGr/UExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcATHBHAExwRwBMcEcA////////////////////////////////wAfgA4AP8AEAH/gAAH/+AAP//8AH///gB///4A////APwAPwD8AD8A/AA/APwAPwD///8Af//+AH///gA///wAB//gAAH/gAgA/wAcAH4AP///////////////////////////////8=',
-                host: ['www.aliyun.com'],
-                popup: function (text) {
-                    openInNewTab('https://www.aliyun.com/product/ai/base_alimt');
-                },
-                custom: function (text) {
-                    //等网页加载完毕
-                    window.onload = function(){
-                        //获取文本区
-                        let sources = document.querySelectorAll('textarea');
-                        //先获得焦点，再输入文字，不然阿里云有某个脚本会让文字消失
-                        sources[4].focus();
-                        triggerEvent(sources[4], 'focus');
-                        sources[4].value = text;
-                        //通过keydown生成回车事件，但是在阿里云翻译页面不起作用
-                        triggerEvent(sources[4], 'keydown');
-                        triggerEvent(sources[4], 'input');
-                        triggerEvent(sources[4], 'keyup');
-                        //triggerEvent(sources[4], 'change');
-                    };
                 }
             },
             {
