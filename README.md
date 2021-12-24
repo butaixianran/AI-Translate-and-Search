@@ -12,17 +12,18 @@
 ![FullMode](https://github.com/butaixianran/AI-Translate-and-Search/blob/main/res/img/FullMode.jpg)
 
 
-
 # 安装
-github地址：  
-https://github.com/butaixianran/AI-Translate-and-Search
+Chrome扩展版本：
+https://chrome.google.com/webstore/detail/ai%E7%BF%BB%E8%AF%91%E5%92%8C%E6%90%9C%E7%B4%A2/hgccnmjdlfakepijceijgkbicglomcoa
 
-脚本安装地址：  
+User Script版本：  
 https://greasyfork.org/zh-CN/scripts/420649-ai-translate-and-search
 
 Chrome类浏览器需要先安装Tampermonkey扩展，才能安装用户脚本。  
 https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 
+github地址：  
+https://github.com/butaixianran/AI-Translate-and-Search
 
 # 创作说明
 根据barrer发布的用户脚本改编。  
