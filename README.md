@@ -1,3 +1,11 @@
+# 重要说明
+## 请前往Chrome扩展版本的项目池。User Script脚本版本不再更新
+
+## 由于Chrome迁移到manifest v3带来的一系列改变，User Script版本已经被淘汰，请前往Chrome扩展版本的项目池，使用Chrome扩展版本。
+
+[Chrome扩展版本项目池](https://github.com/butaixianran/Chrome-Extension-AI-Translate-and-Search)  
+
+
 # AI-Translate-and-Search
 划词AI翻译+搜索：
 * **AI翻译按质量和热度综合排序。调用：** 金山翻译，有道翻译，阿里翻译，百度翻译，搜狗翻译，腾讯翻译，彩云小译，DeepL，沪江日语词典等。
